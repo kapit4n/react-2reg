@@ -3,8 +3,14 @@ import PropTypes from "prop-types";
 
 const Product = ({ onSave, onChangeName, onChangeCode }) => (
   <div>
+    Name:
+    <br />
     <input onChange={onChangeName} />
-    <button onClick={onSave} />
+    <br />
+    Code:
+    <br />
+    <input onChange={onChangeCode} /> <br />
+    <button onClick={onSave}>Save</button>
   </div>
 );
 

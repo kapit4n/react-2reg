@@ -12,6 +12,14 @@ const mapDispathcToProps = dispatch => {
   return {
     onSave: id => {
       dispatch(onSave(id));
+    },
+
+    onChangeName: event => {
+      console.log(event.target.value);
+    },
+
+    onChangeCode: event => {
+      console.log(event.target.value);
     }
   };
 };
