@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Product = ({ product, onSave, onChangeName, onChangeCode }) => (
+const Product = ({ product, onSave, onCancel, onChangeName, onChangeCode }) => (
   <form>
     <div className="form-group">
       <label>Product Name</label>
@@ -26,7 +26,13 @@ const Product = ({ product, onSave, onChangeName, onChangeCode }) => (
         placeholder="Enter Product Code"
       />
     </div>
-    <button onClick={onSave}>Save</button>
+    <button className="btn" onClick={onSave}>
+      Save
+    </button>
+
+    <button className="btn" onClick={onCancel}>
+      Cancel
+    </button>
   </form>
 );
 

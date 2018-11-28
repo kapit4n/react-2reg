@@ -15,6 +15,11 @@ const mapDispathcToProps = dispatch => {
       event.preventDefault();
     },
 
+    onCancel: event => {
+      dispatch(init());
+      event.preventDefault();
+    },
+
     onChangeName: event => {
       dispatch(updateName(event.target.value));
     },
