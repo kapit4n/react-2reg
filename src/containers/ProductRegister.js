@@ -1,6 +1,14 @@
 import { connect } from "react-redux";
 import Product from "../comps/Product";
-import { onSave, updateName, updateCode, init } from "../actions/products";
+import {
+  onSave,
+  updateName,
+  updateCode,
+  updatePrice,
+  updateDescription,
+  updateImage,
+  init
+} from "../actions/products";
 
 const mapStateToProps = state => {
   return {
@@ -26,6 +34,18 @@ const mapDispathcToProps = dispatch => {
 
     onChangeCode: event => {
       dispatch(updateCode(event.target.value));
+    },
+
+    onChangePrice: event => {
+      dispatch(updatePrice(event.target.value));
+    },
+
+    onChangeDescription: event => {
+      dispatch(updateDescription(event.target.value));
+    },
+
+    onChangeImage: event => {
+      dispatch(updateImage(event.target.value));
     }
   };
 };
