@@ -10,9 +10,14 @@ const mapStateToProps = state => {
 
 const mapDispathcToProps = dispatch => {
   return {
-    onSave: () => {
+    onSave: event => {
       dispatch(onSave());
-      //dispatch(init());
+      event.preventDefault();
+    },
+
+    onCancel: event => {
+      dispatch(init());
+      event.preventDefault();
     },
 
     onChangeName: event => {
