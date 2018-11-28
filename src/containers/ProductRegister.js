@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Product from "../comps/Product";
-import { onSave } from "../actions/products";
+import { onSave, updateName, updateCode, init } from "../actions/products";
 
 const mapStateToProps = state => {
   return {
@@ -10,16 +10,17 @@ const mapStateToProps = state => {
 
 const mapDispathcToProps = dispatch => {
   return {
-    onSave: id => {
-      dispatch(onSave(id));
+    onSave: () => {
+      dispatch(onSave());
+      //dispatch(init());
     },
 
     onChangeName: event => {
-      console.log(event.target.value);
+      dispatch(updateName(event.target.value));
     },
 
     onChangeCode: event => {
-      console.log(event.target.value);
+      dispatch(updateCode(event.target.value));
     }
   };
 };
