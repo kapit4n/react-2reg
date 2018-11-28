@@ -12,6 +12,7 @@ const Product = ({
   onChangeImage
 }) => (
   <form>
+    <h2 style={{ textTransform: "uppercase" }}>Register product</h2>
     <div className="form-group">
       <label>Product Name</label>
       <input
