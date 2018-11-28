@@ -10,7 +10,12 @@ import {
 
 const inititalState = {
   product: {},
-  products: [{ name: "Coca Cola", code: "CC01X" }]
+  products: [
+    { name: "Coca Cola", code: "CC01X" },
+    { name: "Sprite", code: "CC03X" },
+    { name: "Fanta", code: "CC02X" }
+  ],
+  productDisplay: { name: "Coca Cola", code: "CC01X" }
 };
 
 function productApp(state = inititalState, action) {
