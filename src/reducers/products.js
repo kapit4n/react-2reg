@@ -9,7 +9,8 @@ import {
 } from "../actions/products";
 
 const inititalState = {
-  product: {}
+  product: {},
+  products: [{ name: "Coca Cola", code: "CC01X" }]
 };
 
 function productApp(state = inititalState, action) {
