@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Product = ({ onSave, onChangeName, onChangeCode }) => (
+const Product = ({ product, onSave, onChangeName, onChangeCode }) => (
   <div>
     Name:
     <br />
-    <input onChange={onChangeName} />
+    <input onChange={onChangeName} value={product.name} />
     <br />
     Code:
     <br />
-    <input onChange={onChangeCode} /> <br />
+    <input onChange={onChangeCode} value={product.code} /> <br />
     <button onClick={onSave}>Save</button>
   </div>
 );
