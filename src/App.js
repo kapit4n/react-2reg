@@ -6,7 +6,7 @@ import ProductDisplay from "./containers/ProductDisplay";
 
 const App = () => (
   <div>
-    <ProductDisplay />
+    <ProductList />
   </div>
 );
 

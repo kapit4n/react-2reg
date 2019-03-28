@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import ProductListComp from "../comps/ProductListComp";
+import {onNew} from "../actions/products"
 
 const mapStateToProps = state => {
   return {
@@ -7,18 +8,13 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispathcToProps = dispatch => {
-  return {
-    newOpen: event => {
-      //dispatch(newOpen());
-      event.preventDefault();
-    }
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  onNew: data => dispatch(onNew(data))
+});
 
 const ProductList = connect(
   mapStateToProps,
-  mapDispathcToProps
+  mapDispatchToProps
 )(ProductListComp);
 
 export default ProductList;
