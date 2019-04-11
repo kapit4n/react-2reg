@@ -1,4 +1,5 @@
 export const ON_SAVE = "ON_SAVE";
+export const ON_NEW = "ON_NEW";
 export const UPDATE_NAME = "UPDATE_NAME";
 export const UPDATE_CODE = "UPDATE_CODE";
 export const UPDATE_PRICE = "UPDATE_PRICE";
@@ -8,6 +9,10 @@ export const INIT_PRODUCT = "INIT_PRODUCT";
 
 export function onSave() {
   return { type: ON_SAVE };
+}
+
+export function onNew() {
+  return { type: ON_NEW };
 }
 
 export function init() {
